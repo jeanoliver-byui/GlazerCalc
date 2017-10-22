@@ -12,7 +12,10 @@ namespace GlazerCalc
         public double heigth; 
         public double woodLength; 
         public double glassArea;
-      
+        public int quantity;
+        public string tintColor;
+
+        public string quoteDate { get; internal set; }
     }
     
 }

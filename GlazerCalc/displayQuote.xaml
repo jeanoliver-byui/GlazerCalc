@@ -8,14 +8,21 @@
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <TextBlock x:Name="GlazerCalcTitle" HorizontalAlignment="Center" TextWrapping="Wrap" Text="GlazerCalc Program" VerticalAlignment="Center" Style="{StaticResource HeaderTextBlockStyle}" FontSize="36" Margin="0,0,0,400" Foreground="{ThemeResource SystemControlBackgroundAccentBrush}"/>
-        <TextBlock x:Name="widthQuoteDetailsLabel" HorizontalAlignment="Center" TextWrapping="Wrap" Text="Width:" RenderTransformOrigin="1.358,-0.28" FontSize="22" Width="87" VerticalAlignment="Center" Margin="0,0,100,200"/>
-        <TextBox x:Name="widthQuoteDetailsTextBox" HorizontalAlignment="Center" TextWrapping="Wrap" Text="" Width="121" FontSize="22"  VerticalAlignment="Center" Margin="100,0,0,200" IsReadOnly="True"/>
-        <TextBlock x:Name="heigthQuoteDetailsLabel" HorizontalAlignment="Center" TextWrapping="Wrap" Text="Heigth:" VerticalAlignment="Center" RenderTransformOrigin="1.358,-0.28" FontSize="22" Width="87" Margin="0,0,100,90"/>
-        <TextBox x:Name="heigthQuoteDetailsTextBox" HorizontalAlignment="Center" TextWrapping="Wrap" Text="" VerticalAlignment="Center" Width="121" FontSize="22" MinWidth="61" Margin="100,0,0,90" IsReadOnly="True"/>
+        <TextBlock x:Name="GlazerCalcTitle" HorizontalAlignment="Center" TextWrapping="Wrap" Text="GlazerCalc Program" VerticalAlignment="Center" Style="{StaticResource HeaderTextBlockStyle}" FontSize="36" Foreground="{ThemeResource SystemControlBackgroundAccentBrush}" Margin="0,0,0,400"/>
+        <TextBlock x:Name="widthQuoteDetailsLabel" HorizontalAlignment="Center" TextWrapping="Wrap" Text="Width:" RenderTransformOrigin="1.358,-0.28" FontSize="22" Width="87" VerticalAlignment="Center" Margin="0,0,200,200"/>
+        <TextBox x:Name="widthQuoteDetailsTextBox" HorizontalAlignment="Center" TextWrapping="Wrap" Text="" Width="121" FontSize="22"  VerticalAlignment="Center" Margin="0,0,10,200" IsReadOnly="True" BorderBrush="#66FFFFFF"/>
+        <TextBlock x:Name="heigthQuoteDetailsLabel" HorizontalAlignment="Center" TextWrapping="Wrap" Text="Heigth:" VerticalAlignment="Center" RenderTransformOrigin="1.358,-0.28" FontSize="22" Width="87" Margin="280,0,0,200"/>
+        <TextBox x:Name="heigthQuoteDetailsTextBox" HorizontalAlignment="Center" TextWrapping="Wrap" Text="" VerticalAlignment="Center" Width="121" FontSize="22" MinWidth="61" Margin="480,0,0,200" IsReadOnly="True" BorderBrush="#66FFFFFF"/>
         <TextBlock x:Name="displayQuoteTitle" HorizontalAlignment="Center" TextWrapping="Wrap" Text="Quote Details" VerticalAlignment="Center" Margin="0,0,0,300" FontSize="22"/>
-        <TextBox x:Name="woodLengthQuoteDetails" HorizontalAlignment="Center" TextWrapping="Wrap" Text="" VerticalAlignment="Center" MinWidth="450" Margin="160,40,0,0" FontSize="22" IsReadOnly="True"/>
-        <TextBox x:Name="glassAreaQuoteDetails" HorizontalAlignment="Center" TextWrapping="Wrap" Text="" VerticalAlignment="Center" MinWidth="450" FontSize="22" Margin="160,140,0,0" IsReadOnly="True"/>
+        <TextBox x:Name="woodLengthQuoteDetails" HorizontalAlignment="Center" TextWrapping="Wrap" Text="" VerticalAlignment="Center" MinWidth="450" Margin="140,40,0,0" FontSize="22" IsReadOnly="True" Canvas.ZIndex="6" BorderBrush="#66FFFFFF"/>
+        <TextBox x:Name="glassAreaQuoteDetails" HorizontalAlignment="Center" TextWrapping="Wrap" Text="" VerticalAlignment="Center" MinWidth="450" FontSize="22" Margin="140,160,0,0" IsReadOnly="True" BorderBrush="#66FFFFFF"/>
+        <TextBlock x:Name="colorLabel" HorizontalAlignment="Center" TextWrapping="Wrap" Text="Color:" VerticalAlignment="Center" Margin="0,0,230,90" FontSize="22"/>
+        <TextBox x:Name="colorTextBox" HorizontalAlignment="Center" TextWrapping="Wrap" Text="" VerticalAlignment="Center" Margin="0,0,10,90" FontSize="22" Width="120" IsReadOnly="True" BorderBrush="#66FFFFFF"/>
+        <TextBlock x:Name="quantityLabel" HorizontalAlignment="Center" TextWrapping="Wrap" Text="Quantity:" VerticalAlignment="Center" Margin="280,0,0,90" FontSize="22"/>
+        <TextBox x:Name="quantityTextBox" HorizontalAlignment="Center" TextWrapping="Wrap" Text="" VerticalAlignment="Center" Margin="450,0,0,90" FontSize="22" UseLayoutRounding="True" Width="40" MinWidth="62" IsReadOnly="True" BorderBrush="#66FFFFFF"/>
+        <Button x:Name="backButton" Content="Back" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="380,420,0,0" Click="back_Click" FontSize="22" Width="80" MinWidth="5"/>
+        <TextBox x:Name="DateTextBox" HorizontalAlignment="Center" TextWrapping="Wrap" Text="" VerticalAlignment="Center" Margin="50,300,0,0" IsReadOnly="True" FontSize="22" MinHeight="23" UseLayoutRounding="True" BorderBrush="#66FFFFFF"/>
+        <TextBlock x:Name="dateLabel" HorizontalAlignment="Center" TextWrapping="Wrap" Text="Date:" VerticalAlignment="Center" FontSize="22" Margin="0,300,230,0"/>
 
     </Grid>
 </Page>

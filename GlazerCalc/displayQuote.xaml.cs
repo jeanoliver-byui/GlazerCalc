@@ -25,47 +25,46 @@ namespace GlazerCalc
         private double heigth;
         private double woodLength;
         private double glassArea;
-
-        //private double heigth;
-        //private double woodLength;
-        //private double glassArea;
+        private int quantity;
+        private string tintColor;
+        private string quoteDate;
 
         public displayQuote()
         {
             this.InitializeComponent();
         }
 
-        public displayQuote(double width, double heigth, double woodLength, double glassArea)
+        public displayQuote(double width, double heigth, double woodLength, double glassArea,
+            string tintColor, int quantity, string quoteDate)
         {
             Width = width;
             this.heigth = heigth;
             this.woodLength = woodLength;
             this.glassArea = glassArea;
+            this.tintColor = tintColor;
+            this.quantity = quantity;
+            this.quoteDate = quoteDate;
         }
 
-        //public displayQuote(double width, double heigth, double woodLength, double glassArea)
-        //{
-        //    widthQuoteDetailsTextBox.Text = width.ToString();
-        //    heigthQuoteDetailsTextBox.Text = heigth.ToString();
-        //    woodLengthQuoteDetails.Text = "The length of the wood is " +
-        //        woodLength.ToString() + " feet";
-        //    //this.glassArea = glassArea;
-        //}
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
             Quote quote = e.Parameter as Quote;
 
             widthQuoteDetailsTextBox.Text = quote.width.ToString();
             heigthQuoteDetailsTextBox.Text = quote.heigth.ToString();
+            colorTextBox.Text = quote.tintColor;
+            quantityTextBox.Text = quote.quantity.ToString();
+            DateTextBox.Text = quote.quoteDate;
             woodLengthQuoteDetails.Text = "The length of the wood is " + quote.woodLength.ToString()
                                           + " feet";
             glassAreaQuoteDetails.Text = "The area of the glass is " + quote.glassArea.ToString()
-                                          + " square metres";
-            
-            //tintDisplay.Text = order.Tint;
-            //amountDisplay.Text = order.Amount.ToString();
-            //dateDisplay.Text = order.Date.ToString();
+                                          + " square meters";
         }
 
+        private void back_Click(object sender, RoutedEventArgs e)
+        {
+            // Navigate back to the main page.
+            this.Frame.Navigate(typeof(MainPage));
+        }
     }
 }

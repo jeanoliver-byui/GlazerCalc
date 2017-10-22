@@ -10,13 +10,13 @@
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <TextBlock x:Name="GlazerCalcTitle" HorizontalAlignment="Center" TextWrapping="Wrap" Text="GlazerCalc Program" VerticalAlignment="Top" Style="{StaticResource HeaderTextBlockStyle}" Margin="0,100,0,0" FontSize="36" Foreground="{ThemeResource SystemControlBackgroundAccentBrush}" FontWeight="Normal"/>
         <TextBlock x:Name="widthLabel" HorizontalAlignment="Center" TextWrapping="Wrap" Text="Width:" RenderTransformOrigin="1.358,-0.28" FontSize="22" Width="87" VerticalAlignment="Center" Margin="0,0,200,200"/>
-        <TextBox x:Name="widthTextBox" HorizontalAlignment="Center" TextWrapping="Wrap" Text="" Width="121" FontSize="22" VerticalAlignment="Center" Margin="80,0,0,200" TextChanged="widthTextBox_TextChanged"/>
+        <TextBox x:Name="widthTextBox" HorizontalAlignment="Center" TextWrapping="Wrap" Text="" Width="121" FontSize="22" VerticalAlignment="Center" Margin="80,0,0,200" TabIndex="1" KeyUp="width_KeyUp"/>
         <TextBlock x:Name="heigthLabel" HorizontalAlignment="Center" TextWrapping="Wrap" Text="Heigth:" VerticalAlignment="Center" RenderTransformOrigin="1.358,-0.28" FontSize="22" Width="87" Margin="0,0,200,80"/>
-        <TextBox x:Name="heigthTextBox" HorizontalAlignment="Center" TextWrapping="Wrap" Text="" VerticalAlignment="Center" Width="121" FontSize="22" Margin="80,0,0,80" MinWidth="61" TextChanged="heigthTextBox_TextChanged"/>
-        <Button x:Name="quoteButton" Content="Quote" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="22" Margin="0,450,0,0" Click="quoteButton_Click" MinWidth="4"/>
-        <ComboBox x:Name="tintComboBox" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="60,50,0,0" FontSize="22" MinWidth="100"/>
+        <TextBox x:Name="heigthTextBox" HorizontalAlignment="Center" TextWrapping="Wrap" Text="" VerticalAlignment="Center" Width="121" FontSize="22" Margin="80,0,0,80" MinWidth="61" TabIndex="2" KeyUp="heigth_KeyUp"/>
+        <Button x:Name="quoteButton" Content="Quote" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="22" Margin="210,470,0,0" Click="quoteButton_Click" MinWidth="8" TabIndex="5" Canvas.ZIndex="2"/>
+        <ComboBox x:Name="tintComboBox" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="80,50,0,0" FontSize="22" MinWidth="100" Width="121" TabIndex="3"/>
         <TextBlock x:Name="tintColorLabel" HorizontalAlignment="Center" TextWrapping="Wrap" Text="Tint Color:" VerticalAlignment="Center" Margin="0,50,200,0" FontSize="22"/>
-        <Slider x:Name="quantitySlider" HorizontalAlignment="Center" VerticalAlignment="Center" Maximum="10" Value="1" Minimum="1" FontSize="22" LargeChange="10" Width="120" Margin="90,180,0,0"/>
+        <Slider x:Name="quantitySlider" HorizontalAlignment="Center" VerticalAlignment="Center" Maximum="10" Value="1" Minimum="1" FontSize="22" LargeChange="10" Width="120" Margin="80,180,0,0" TabIndex="4"/>
         <TextBlock x:Name="quantityLabel" HorizontalAlignment="Center" TextWrapping="Wrap" Text="Quantity:" VerticalAlignment="Center" FontSize="22" Margin="0,180,200,0"/>
 
     </Grid>
